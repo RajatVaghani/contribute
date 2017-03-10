@@ -130,6 +130,9 @@ p{
 	font-family: Muli;
 }
 
+
+
+
 /* Portrait phones and smaller */
 @media (max-width: 1000px) {
 
@@ -159,6 +162,19 @@ p{
 		background: #fff;
 
 	}
+
+    .organization{
+        min-height: 230px !important;
+        font-size: 13px;
+    }
+
+    .organization .orgname{
+        font-size: 15px;
+    }
+
+    .organization .place{
+        font-size: 12px;
+    }
 
 }
 
@@ -233,27 +249,42 @@ p{
     border-radius: 100px;
 }
 
-//----------------------------------------- INSTITUTION -------------------------------------------------
+//----------------------------------------- ORGANIZATION -------------------------------------------------
 
 
-.thumb{
-	width:70px;
-	height:70px;
+img.thumb{
+	width:70px !important;
+	height:70px !important;
+    border-radius: 4px !important;
 }
 
-.institution{
+.organization{
 	position:relative;
 	margin: 0px 5px 30px 10px;
 	padding: 10px;
 	border: 1px solid #ddd;
 	border-radius: 3px;
+    min-height: 220px;
 }
 
-.institution:hover{
-	background: #f2f0f0;
+.organization .tag_icon{
+    width: 30px;
+    height: 30px;
 }
 
-.instname{
+.organization:hover{
+	background: #cbf1f2;
+}
+
+.cityfilter{
+    display: block;
+}
+
+.affix{
+    position: sticky;
+}
+
+.orgname{
 	font-size: 18px;
 	font-family: Montserrat;
 }

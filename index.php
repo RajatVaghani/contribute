@@ -47,7 +47,7 @@
 			Create Change. Motivate Change. <b>Be The Change!</b>
 		</p>
 		<div class="btn-group" role="group" style="padding-top:100px;">
-		  <a href="how" class="btn btn-default mainop">I'm in!</a>
+		  <a href="search.php" class="btn btn-default mainop">I'm in!</a>
 		</div>
 	</section>
 
@@ -169,7 +169,7 @@
 	</section>
 
 	<section class="sec_button container-fluid">
-		<a href="" class="fillbtn btn btn-lg">I WANT TO CONTRIBUTE</a>
+		<a href="search.php" class="fillbtn btn btn-lg">I WANT TO CONTRIBUTE</a>
 		<a href="" class="strokebtn btn btn-lg">CONTACT US</a>
 	</section>
 
