@@ -1,109 +1,107 @@
 /* Sticky footer styles
 -------------------------------------------------- */
+
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
+
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #006064;
-	color:#fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #006064;
+    color: #fff;
 }
 
-#footer p{
+#footer p {}
+
+.sec {
+    padding-top: 30px;
+    min-height: 350px;
+    border-bottom: 1px solid #ddd;
 }
 
-
-.sec{
-	padding-top:30px;
-	min-height:350px;
-	border-bottom: 1px solid #ddd;
+.sec_button {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
-.sec_button{
-padding-top:40px;
-padding-bottom:40px;
-text-align:center;
-}
-#main{
-	margin-top:50px;
-	padding:50px;
+#main {
+    margin-top: 50px;
+    padding: 50px;
 }
 
-
-.navbar{
-	background:none;
-	font-family: Muli;
-	font-weight: 400;
+.navbar {
+    background: none;
+    font-family: Muli;
+    font-weight: 400;
 }
 
-.past-main{
-	background: rgba(255,255,255,0.95);
+.past-main {
+    background: rgba(255, 255, 255, 0.95);
 }
 
-
-h1,h2,h3{
-	font-family: Montserrat;
-	color: #00838f;
+h1, h2, h3 {
+    font-family: Montserrat;
+    color: #00838f;
 }
 
-p{
-	font-family: Muli;
-	font-weight: 300;
+p {
+    font-family: Muli;
+    font-weight: 300;
 }
 
-.mainop{
-	font-size: 30px;
-	font-family: Muli;
-	background: none;
-	border: 2px solid #fff;
-	color: #fff;
+.mainop {
+    font-size: 30px;
+    font-family: Muli;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
 }
 
-.introtext{
-	color: #fff;
-	font-size: 20px;
+.introtext {
+    color: #fff;
+    font-size: 20px;
 }
 
-.mainop:hover{
-	background: #fff;
-	color: #006064;
-	border: 2px solid #fff;
+.mainop:hover {
+    background: #fff;
+    color: #006064;
+    border: 2px solid #fff;
 }
 
-.threecols{
-	margin: 0px auto;
+.threecols {
+    margin: 0px auto;
     min-height: 300px;
-	padding-bottom:50px;
+    padding-bottom: 50px;
 }
-
 
 .threecols [class*='col-']:not(:last-child):after {
-  background: #4DD0E1;
-  opacity: 0.4;
-  width: 1px;
-  content: "";
-  display:block;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  right: 0;
-  min-height: 70px;
+    background: #4DD0E1;
+    opacity: 0.4;
+    width: 1px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    min-height: 70px;
 }
 
-.colheader{
-	padding: 12px;
+.colheader {
+    padding: 12px;
     background: #E0F7FA;
-	color: #00838f;
+    color: #00838f;
     border-bottom: 1px solid #ddd;
     border-radius: 3px 3px 0px 0px;
     font-size: 17px;
@@ -112,136 +110,153 @@ p{
     font-family: Montserrat;
 }
 
-.colbox{
-	background: #fefefe;
+.colbox {
+    background: #fefefe;
     border-radius: 4px;
-	min-height:410px;
-	transition: 0.3s linear;
+    min-height: 410px;
+    transition: 0.3s linear;
 }
 
-.colbox:hover{
-	background: #E0F7FA;
-	transition: 0.3s linear;
-	box-shadow: 0px 0px 11px -6px #000;
+.colbox:hover {
+    background: #E0F7FA;
+    transition: 0.3s linear;
+    box-shadow: 0px 0px 11px -6px #000;
 }
 
-.colbody{
-	padding:12px;
-	font-family: Muli;
+.colbody {
+    padding: 12px;
+    font-family: Muli;
 }
 
+.fbox {
+    background: #EF5350;
+    padding: 5px 15px 15px 15px;
+    margin: 0px 10px 5px 0px;
+    color: white;
+    border-radius: 3px;
+    font-family: Muli;
+}
 
+.fbox:hover {
+    box-shadow: 0px 3px 10px -3px #000;
+}
 
 
 /* Portrait phones and smaller */
+
 @media (max-width: 1000px) {
-
-	#main{
-		padding:25px;
-	}
-	.threecols{
-		padding-top:40px;
-		padding-bottom:40px;
-		margin:0px auto;
-	}
-
-	.colsecond{
-		margin-top:15px;
-	}
-
-	.colthird{
-		margin-top:15px;
-	}
-
-	.navbar{
-		background: rgba(255,255,255,0.95);
-	}
-
-	.threecols [class*='col-']:not(:last-child):after {
-
-		background: #fff;
-
-	}
-
-    .organization{
+    #main {
+        padding: 25px;
+    }
+    .threecols {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin: 0px auto;
+    }
+    .colsecond {
+        margin-top: 15px;
+    }
+    .colthird {
+        margin-top: 15px;
+    }
+    .navbar {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    .threecols [class*='col-']:not(:last-child):after {
+        background: #fff;
+    }
+    .organization {
         min-height: 230px !important;
         font-size: 13px;
     }
-
-    .organization .orgname{
+    .organization .orgname {
         font-size: 15px;
     }
-
-    .organization .place{
+    .organization .place {
         font-size: 12px;
     }
-
 }
 
 
-
 /* WHAT YOU NEED */
+
 .fading-side-menu.affix-top {
     opacity: 1;
     transition: opacity 0.3s
 }
+
 .fading-side-menu.affix {
     top: 65px;
 }
+
 .fading-side-menu.affix {
     opacity: 0.2;
     transition: opacity 1.5s
 }
+
 .fading-side-menu.affix:hover {
     opacity: 1;
     transition: opacity 0.3s
 }
+
+
 /* RECOMMENDED STYLING BUT NOT REQUIRED */
+
 .fading-side-menu a {
     color: rgb(102, 102, 102);
 }
+
 .fading-side-menu a .fa {
-    padding-right:15px;
+    padding-right: 15px;
 }
 
-
-
 .quote {
-    color: rgba(0,0,0,.1);
+    color: rgba(0, 0, 0, .1);
     text-align: center;
     margin-bottom: 30px;
 }
 
+
 /*-------------------------------*/
+
+
 /*    Carousel Fade Transition   */
+
+
 /*-------------------------------*/
 
 #fade-quote-carousel.carousel {
-  padding-bottom: 60px;
+    padding-bottom: 60px;
 }
+
 #fade-quote-carousel.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
+    opacity: 0;
+    -webkit-transition-property: opacity;
+    -ms-transition-property: opacity;
+    transition-property: opacity;
 }
+
 #fade-quote-carousel.carousel .carousel-inner .active {
-  opacity: 1;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
+    opacity: 1;
+    -webkit-transition-property: opacity;
+    -ms-transition-property: opacity;
+    transition-property: opacity;
 }
+
 #fade-quote-carousel.carousel .carousel-indicators {
-  bottom: 10px;
+    bottom: 10px;
 }
-#fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: #e84a64;
-  border: none;
+
+#fade-quote-carousel.carousel .carousel-indicators>li {
+    background-color: #e84a64;
+    border: none;
 }
+
 #fade-quote-carousel blockquote {
     text-align: center;
     border: none;
 }
+
 #fade-quote-carousel .profile-circle {
     width: 110px;
     height: 110px;
@@ -250,64 +265,62 @@ p{
 }
 
 //----------------------------------------- ORGANIZATION -------------------------------------------------
-
-
-img.thumb{
-	width:70px !important;
-	height:70px !important;
+img.thumb {
+    width: 70px !important;
+    height: 70px !important;
     border-radius: 4px !important;
 }
 
-.organization{
-	position:relative;
-	margin: 0px 5px 30px 10px;
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-radius: 3px;
+.organization {
+    position: relative;
+    margin: 0px 5px 30px 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
     min-height: 220px;
+    font-family: Muli;
 }
 
-.organization .tag_icon{
+.organization .tag_icon {
     width: 30px;
     height: 30px;
 }
 
-.organization:hover{
-	background: #cbf1f2;
+.organization:hover {
+    background: #cbf1f2;
 }
 
-.cityfilter{
+.cityfilter {
     display: block;
 }
 
-.affix{
+.affix {
     position: sticky;
 }
 
-.orgname{
-	font-size: 18px;
-	font-family: Montserrat;
+.orgname {
+    font-size: 18px;
+    font-family: Montserrat;
 }
 
-.place{
-	margin-top:-12px;
+.place {
+    margin-top: -12px;
 }
 
-.btnmore{
+.btnmore {
     position: absolute;
     right: 5px;
     bottom: 5px;
 }
 
-.verilabel{
-	padding: 7px;
+.verilabel {
+    padding: 7px;
     font-size: 12px;
     border: 1px solid #999;
 }
 
-
-#noresults{
-	display: block;
+#noresults {
+    display: block;
     text-align: center;
     padding: 15px;
     border: 1px solid #ddd;
@@ -315,50 +328,190 @@ img.thumb{
 }
 
 
+/* ------------------ WALL OF FAME ----------------- */
+
+.putname {
+    background: #EF5350;
+    border-bottom: 0px;
+    min-height: 150px;
+    text-align: center;
+}
+
+.putname h3, .putname h4, .putname h4 a {
+    color: #fff;
+    font-family: Montserrat;
+}
+
+.putname h4 a {
+    padding-bottom: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #EF5350;
+    transition: 0.1s linear;
+}
+
+.putname h4 a:hover {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    transition: 0.1s linear;
+}
+
+.memberbox {
+    margin: 20px 5px;
+    height: 300px;
+    background: #EDFEFF;
+    box-shadow: 0px 2px 7px -4px #000;
+    transition: 0.1s linear;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    border: none;
+    overflow: hidden;
+}
+
+.memberbox:hover {
+    box-shadow: 0px 2px 7px -1px #000;
+    transition: 0.1s linear;
+    border: none;
+    backface-visibility: hidden;
+}
+
+.memberbox:hover .mphotohover {
+    opacity: 0.9;
+    transition: 0.1s linear;
+    backface-visibility: hidden;
+}
+
+.memberphoto {
+    height: 200px;
+    background: #fff;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0px;
+    transition: 0.1s linear;
+}
+
+.mphotohover {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    backface-visibility: hidden;
+    padding: 0px;
+    border-radius: 3px 3px 0px 0px;
+    opacity: 0;
+    display: block;
+    background: #333;
+    transition: 0.1s linear;
+}
+
+.mphotohover img {
+    width: 75px;
+    display: block;
+    position: absolute;
+    top: 33%;
+    backface-visibility: hidden;
+    left: 35%;
+}
+
+.membername {
+    background: #00838F;
+    padding: 18px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: Raleway;
+}
+
+.membercontributions {
+    background: #006f79;
+    padding: 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    font-family: Muli;
+}
+
+.wallback {
+    background-color: #1a222f;
+    background-image: url(../images/back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wallback h1, .wallback h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.wallback h2 {
+    font-family: Raleway;
+}
+
+
 /*--------------- BUTTONS -------------------- */
 
-.fillbtn{
-    background:#EF5350;
-    color:#fff;
+.fillbtn {
+    background: #EF5350;
+    color: #fff;
     border: 2px solid #EF5350;
-    padding:20px;
-    font-family:Montserrat;
-    margin:10px 20px;
+    padding: 20px;
+    font-family: Montserrat;
+    margin: 10px 20px;
     transition: 0.2s linear;
     width: 275px;
 }
 
-.fillbtn:hover{
-    background:#FFF;
+.fillbtn:hover {
+    background: #FFF;
     border: 2px solid #EF5350;
-    color:#333;
+    color: #333;
     transition: 0.2s linear;
 }
 
-.strokebtn{
-    background:#FFF;
+.strokebtn {
+    background: #FFF;
     border: 2px solid #EF5350;
-    color:#333;
-    padding:20px;
-    font-family:Montserrat;
-    margin:10px 20px;
+    color: #333;
+    padding: 20px;
+    font-family: Montserrat;
+    margin: 10px 20px;
     transition: 0.2s linear;
     width: 275px;
 }
 
-.strokebtn:hover{
-    background:#EF5350;
-    color:#fff;
+.strokebtn:hover {
+    background: #EF5350;
+    color: #fff;
     border: 2px solid #EF5350;
     transition: 0.2s linear;
 }
+
 
 /* -------------- SPECIAL LINK ---------------- */
 
-a.link_wall, .link_wall:hover, a.link_wall:visited{
+a.link_wall, .link_wall:hover, a.link_wall:visited {
     background: #EF5350 !important;
     color: #fff !important;
     padding: 7px !important;
     margin: 8px !important;
     border-radius: 3px;
+}
+
+background: #EF5350;
+color: #fff;
+border: 2px solid #EF5350;
+transition: 0.2s linear;
+
+}
+
+/* -------------- SPECIAL LINK ---------------- */
+a.link_wall, .link_wall:hover, a.link_wall:visited {
+    background: #EF5350 !important;
+    color: #fff !important;
+    padding: 7px !important;
+    margin: 8px !important;
+    border-radius: 3px;
+}
+
 }

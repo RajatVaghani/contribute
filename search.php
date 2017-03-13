@@ -64,7 +64,7 @@ $cats = ["1"=>"Orphanage", "2"=>"Old Age Home", "3"=>"Blood Bank", "4"=>"Special
 			<h4>Filters</h4><hr class="no-margin">
 			<ul id="filters" class="list-unstyled pre-scrollable">
 
-				<li id="city_ones">
+				<li id="city_ones" class="fbox">
 					<div class="page-header">
 						Based on City
 					</div>
@@ -105,7 +105,7 @@ $cats = ["1"=>"Orphanage", "2"=>"Old Age Home", "3"=>"Blood Bank", "4"=>"Special
 						</label>
 					</div>
 				</li>
-				<li id="category_ones">
+				<li id="category_ones" class="fbox">
 					<div class="page-header">
 						Based on Category
 					</div>
