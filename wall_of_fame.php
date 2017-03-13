@@ -24,6 +24,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
 
 
   </head>
@@ -40,8 +42,8 @@
 
 	<section id="main" class="sec container-fluid wallback">
         <img src="images/wreath.png" alt="" style="display:block; margin:10px auto;">
-        <h1>Wall of Fame</h1>
-        <h2>"The thrill of taking lasts a day. <br>The thrill of giving lasts a lifetime."</h2>
+        <h1 class="animated bounceIn">Wall of Fame</h1>
+        <h2 class="animated fadeIn" style="animation-delay: 1s;">"The thrill of taking lasts a day. <br>The thrill of giving lasts a lifetime."</h2>
 	</section>
 
 
