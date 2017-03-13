@@ -48,7 +48,7 @@
 
 
     <section class="sec container" style="padding-bottom:30px">
-        <h2 class="page-header">Contributers</h2>
+        <h2 class="page-header"  data-sr="wait 0.2s, move 350px, enter left 700px">Contributers</h2>
 
         <div class="col-md-3">
             <div class="memberbox">
@@ -183,7 +183,7 @@
 
     <section class="sec container-fluid putname">
         <h3>PUT YOUR NAME HERE!</h3>
-        <h4><a href="contactus.php">Tell us about your contribution</a></h4>
+        <h4 data-sr="wait 0.2s, move 250px, enter bottom 0px"><a href="contactus.php">Tell us about your contribution</a></h4>
     </section>
 
 
@@ -202,8 +202,13 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src='js/scrollReveal.js'></script>
+    <script>
 
-	<script>
+	var config = { reset: false, delay: 'always' }
+      window.sr = new scrollReveal(config);
+
+
 
 	// get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
 	var mainbottom = $('#main').offset().top-50;
