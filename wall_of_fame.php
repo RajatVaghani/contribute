@@ -183,7 +183,7 @@
 
     <section class="sec container-fluid putname">
         <h3>PUT YOUR NAME HERE!</h3>
-        <h4 data-sr="wait 0.2s, move 250px, enter bottom 0px"><a href="contactus.php">Tell us about your contribution</a></h4>
+        <h4 data-sr="wait 0.2s, move 250px, enter bottom 0px"><a href="contact.php">Tell us about your contribution</a></h4>
     </section>
 
 

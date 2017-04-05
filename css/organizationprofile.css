@@ -1,0 +1,23 @@
+.media-object {
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+}
+.catagories-img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.thumbnail .caption {
+    padding: 9px;
+    min-height: 20%;
+    color: #333;
+    text-align:center;
+}
+.thumbnail{
+   min-height: 200px;
+}

@@ -170,7 +170,7 @@
 
 	<section class="sec_button container-fluid">
 		<a href="search.php" class="fillbtn btn btn-lg">I WANT TO CONTRIBUTE</a>
-		<a href="" class="strokebtn btn btn-lg">CONTACT US</a>
+		<a href="contact.php" class="strokebtn btn btn-lg">CONTACT US</a>
 	</section>
 
 

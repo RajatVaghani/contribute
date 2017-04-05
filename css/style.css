@@ -21,7 +21,56 @@ body {
     color: #fff;
 }
 
+.stable td{
+    border-top: none !important;
+}
+
 #footer p {}
+
+/*      UPLOAD CSS      */
+#image-preview {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #eee;
+  color: #ecf0f1;
+}
+#image-preview input {
+  line-height: 200px;
+  font-size: 15px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+#image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #bdc3c7;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
 
 .sec {
     padding-top: 30px;
@@ -498,12 +547,7 @@ a.link_wall, .link_wall:hover, a.link_wall:visited {
     border-radius: 3px;
 }
 
-background: #EF5350;
-color: #fff;
-border: 2px solid #EF5350;
-transition: 0.2s linear;
 
-}
 
 /* -------------- SPECIAL LINK ---------------- */
 a.link_wall, .link_wall:hover, a.link_wall:visited {
@@ -514,4 +558,14 @@ a.link_wall, .link_wall:hover, a.link_wall:visited {
     border-radius: 3px;
 }
 
+
+
+/*----img rounded-----*/
+.img-circle {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border: 1.5px solid #006064;
+    border-radius: 50%;
 }
