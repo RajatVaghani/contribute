@@ -15,6 +15,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact</a></li>
+            <li><a style="cursor:pointer;" data-toggle="modal" data-target="#myModal"  id="contributions">Submit</a></li>
             <li><a href="wall_of_fame.php" class="link_wall"><span class="glyphicon glyphicon-gift" aria-hidden="true"></span> &nbsp;Wall of Fame</a></li>
 			<li><a href="search.php"><span class="fa fa-search"></span></a></li>
           </ul>

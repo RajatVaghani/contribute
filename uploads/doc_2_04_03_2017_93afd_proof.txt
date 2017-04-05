@@ -1,0 +1,6 @@
+xcopy "C:\Users\Rajat\AndroidstudioProjects" "G:\Cyber Sky\Android Studio" /D/S/-Y
+
+xcopy "C:\wamp\www" "G:\Cyber Sky\WWW" /D/S/-Y
+
+xcopy "C:\Users\Rajat\Documents\CyberSky Development" "G:\Cyber Sky\14-10-16" /D/S/-Y
+

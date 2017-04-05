@@ -1,4 +1,7 @@
+<?php
 
+include 'includes/db.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,140 +53,50 @@
     <section class="sec container" style="padding-bottom:30px">
         <h2 class="page-header"  data-sr="wait 0.2s, move 350px, enter left 700px">Contributers</h2>
 
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
+
+        <?php
+
+            $q = "SELECT con_id, con_name, con_photo from contributers";
+            $res = mysqli_query($con, $q);
+
+            while($row = mysqli_fetch_array($res)){
+
+                $q2 = "SELECT count(*) AS count from wall WHERE con_id = ".$row['con_id'];
+                $res2 = mysqli_query($con, $q2);
+                $r = mysqli_fetch_array($res2);
+        ?>
+
+
+            <div class="col-md-3">
+                <div class="memberbox">
+                    <div class="memberphoto col-md-12" style="background-image: url('<?php echo $row['con_photo'];?>');">
+                        <a href="#" class="mphotohover">
+                            <img src="images/view.png" alt="">
+                        </a>
+                    </div>
+                    <div class="membername col-md-12">
+                        <?php echo $row['con_name'];?>
+                    </div>
+                    <div class="membercontributions col-md-12">
+                        <?php echo $r['count'];?> Contributions
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
+        <?php
+            }
+
+         ?>
 
 
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
 
 
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="memberbox">
-                <div class="memberphoto col-md-12" style="background-image: url('images/default_user.png');">
-                    <a href="#" class="mphotohover">
-                        <img src="images/view.png" alt="">
-                    </a>
-                </div>
-                <div class="membername col-md-12">
-                    sample name
-                </div>
-                <div class="membercontributions col-md-12">
-                    16 Contributions
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="sec container-fluid putname">
         <h3>PUT YOUR NAME HERE!</h3>
-        <h4 data-sr="wait 0.2s, move 250px, enter bottom 0px"><a href="contact.php">Tell us about your contribution</a></h4>
+        <h4 data-sr="wait 0.2s, move 250px, enter bottom 0px"><a  style="cursor:pointer;" data-toggle="modal" data-target="#myModal">Tell us about your contribution</a></h4>
     </section>
 
 
