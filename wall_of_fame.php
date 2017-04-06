@@ -58,34 +58,47 @@ include 'includes/db.php';
 
             $q = "SELECT con_id, con_name, con_photo from contributers";
             $res = mysqli_query($con, $q);
-
+            $totalcount=0;
             while($row = mysqli_fetch_array($res)){
 
-                $q2 = "SELECT count(*) AS count from wall WHERE con_id = ".$row['con_id'];
+                $q2 = "SELECT count(*) AS count from wall WHERE verified=1 AND con_id = ".$row['con_id'];
                 $res2 = mysqli_query($con, $q2);
                 $r = mysqli_fetch_array($res2);
+
+                if($r['count']>0){
+                    $totalcount++;
         ?>
 
 
-            <div class="col-md-3">
-                <div class="memberbox">
-                    <div class="memberphoto col-md-12" style="background-image: url('<?php echo $row['con_photo'];?>');">
-                        <a href="#" class="mphotohover">
-                            <img src="images/view.png" alt="">
-                        </a>
-                    </div>
-                    <div class="membername col-md-12">
-                        <?php echo $row['con_name'];?>
-                    </div>
-                    <div class="membercontributions col-md-12">
-                        <?php echo $r['count'];?> Contributions
-                    </div>
-                </div>
-            </div>
+                        <div class="col-md-3">
+                            <div class="memberbox">
+                                <div class="memberphoto col-md-12" style="background-image: url('<?php echo $row['con_photo'];?>');">
+                                    <a href="#" class="mphotohover">
+                                        <img src="images/view.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="membername col-md-12">
+                                    <?php echo $row['con_name'];?>
+                                </div>
+                                <div class="membercontributions col-md-12">
+                                    <?php echo $r['count'];?> Contributions
+                                </div>
+                            </div>
+                        </div>
 
 
         <?php
+                }
             }
+
+            if($totalcount==0){
+        ?>
+
+            <div class="alert alert-info col-md-5 col-xs-12" role="alert"><h4>No contributers yet!</h4></div>
+
+        <?php
+            }
+
 
          ?>
 
