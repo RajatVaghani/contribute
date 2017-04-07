@@ -667,3 +667,55 @@ a.link_wall, .link_wall:hover, a.link_wall:visited {
     border: 1.5px solid #006064;
     border-radius: 50%;
 }
+
+.box{
+    box-sizing: border-box;
+    padding: 35px;
+    border: 1px solid #ddd;
+    /*background: #E0F7FA;*/
+    border-radius: 4px;
+    /*box-shadow: 0px 3px 12px -5px #000;*/
+    transition: 0.1s linear;
+}
+.dropdown-menu {
+      min-width:auto;
+      width:100%;
+ }
+
+ .dropdown-menu>li>a{
+     padding: 15px;
+     color: #444;
+ }
+.nav-tabs.nav-justified>li>a{
+    color: #444;
+}
+.box:hover{
+    /*background: #E0FFFF;*/
+    box-shadow: 0px 3px 10px -7px #000;
+    transition: 0.1s linear;
+}
+
+.box a, .box a:hover{
+    text-decoration: none;
+}
+
+.badge{
+    float: right;
+    width: 35px;
+    border-radius: 3px;
+    height: 21px;
+    line-height: 15px;
+}
+
+.special_link{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    text-decoration: none;
+    transition: 0.1s linear;
+}
+
+.special_link:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    transition: 0.1s linear;
+}
