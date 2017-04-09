@@ -55,14 +55,13 @@ if($code=="na"){
 
                 //SENDMAIL
 
-                 header('Location: find.php?s=1');
+                 header('Location: submit.php?s=1');
             } else {
-                // header('Location: submit.php?e=1');
-                echo $_FILES['image-upload']['tmp_name'];
-                echo $_FILES['proof']['tmp_name'];
+                header('Location: submit.php?e=1');
+
             }
         } else {
-            // header('Location: submit.php?e=1');
+             header('Location: submit.php?e=1');
         }
     }
 }else{
@@ -84,9 +83,8 @@ if($code=="na"){
 
         //header('Location: find.php?s=1');
     } else {
-        // header('Location: submit.php?e=1');
-        echo $_FILES['image-upload']['tmp_name'];
-        echo $_FILES['proof']['tmp_name'];
+        header('Location: submit.php?e=1');
+
     }
 }
 

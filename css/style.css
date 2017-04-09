@@ -719,3 +719,31 @@ a.link_wall, .link_wall:hover, a.link_wall:visited {
     border-bottom: 1px solid #ddd;
     transition: 0.1s linear;
 }
+
+#multiform img{
+    height:100px !important;
+    width:100px !important;
+    padding:5px;
+    border:1px solid #e8debd
+}
+
+#multiform .amazingLabel{
+    margin-left: 0px;
+    padding: 10px;
+    margin:20px;
+    border:1px solid #e8debd;
+}
+
+#multiform #img{
+width:35px !important;
+border:none;
+height:35px !important;
+margin-left:-20px;
+margin-bottom:91px
+}
+.abcd img{
+    height:100px !important;
+    width:100px !important;
+    padding:5px;
+    border:1px solid #e8debd
+}

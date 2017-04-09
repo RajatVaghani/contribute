@@ -73,7 +73,7 @@ include 'includes/db.php';
                         <div class="col-md-3">
                             <div class="memberbox">
                                 <div class="memberphoto col-md-12" style="background-image: url('<?php echo $row['con_photo'];?>');">
-                                    <a href="#" class="mphotohover">
+                                    <a href="contributer.php?id=<?php echo $row['con_id'];?>" class="mphotohover">
                                         <img src="images/view.png" alt="">
                                     </a>
                                 </div>

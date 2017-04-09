@@ -1,4 +1,9 @@
+<?php
 
+$cats = ["1"=>"Orphanage", "2"=>"Old Age Home", "3"=>"Blood Bank", "4"=>"Special Schools", "5"=>"Animal Welfare", "6"=>"NGO", "7"=>"Natural Disaster Relief"];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,12 +98,46 @@
 	</section>
 
 
+        <?php
+
+            include 'includes/db.php';
+            $q = "SELECT org_id FROM ratings r GROUP BY org_id HAVING AVG(rating) > ALL (SELECT AVG(rating) FROM ratings WHERE org_id<>r.org_id GROUP BY org_id)";
+            $res = mysqli_query($con, $q);
+
+            $row = mysqli_fetch_assoc($res);
+
+            $iq = "SELECT * FROM organization WHERE org_id=".$row['org_id'];
+            $resq = mysqli_query($con, $iq);
+
+            $detail = mysqli_fetch_assoc($resq);
+        ?>
+
 
 	<section class="sec container-fluid threecols">
 		<div class="col-xs-12 col-md-4 colfirst">
 			<div class="colbox">
 				<div class="colheader"><i class="fa fa-star-o"></i>&nbsp;&nbsp;FAVORITE OF THE MONTH</div>
-				<div class="colbody">Sample organization</div>
+				<div class="colbody">
+                    <a href="view.php?id=<?php echo $detail['org_id'];?>"><img src="<?php echo $detail['org_logo'];?>" class="img-responsive" style="border-radius:5px;display:block;margin:0 auto;"/></a>
+                    <br/>
+                    <h4 class="page-header" style="padding-top:0px;margin-top:3px;margin-bottom:10px;padding-bottom:3px"><?php echo $detail['org_name']; ?></h4>
+                    <p style="font-size:16px"><?php echo $cats[$detail['org_category']]; ?></p>
+                    <p><?php
+
+                    $q = "SELECT * FROM accept WHERE org_id=".$row['org_id'];
+                    $res = mysqli_query($con, $q);
+
+                    while($r = mysqli_fetch_assoc($res)){
+                        ?>
+
+                        <img class="catagories-img"  data-toggle="tooltip" title="<?php echo $r['acc_value'];?>" src="images/icon_<?php echo $r['acc_value'];?>.png" alt="" style="width:35px;height;35px;">
+
+                        <?php
+
+                    }
+
+                    ?></p>
+                </div>
 			</div>
 		</div>
 

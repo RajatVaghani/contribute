@@ -1,0 +1,12 @@
+.thumbnail{
+    border-radius: 5px;
+    padding: 5px;
+    width: 150px;
+    height: 150px;
+}
+.media-object{
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}

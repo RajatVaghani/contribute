@@ -68,10 +68,8 @@ $cq = "";
                     Manage Organizations <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">View</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Add</a></li>
-                    <li><a href="#">Edit</a></li>
+                    <li><a href="add_org.php">Add</a></li>
+                    <li><a href="edit_org.php">Edit</a></li>
                 </ul>
             </li>
             <li role="presentation" class="active" class="dropdown">
@@ -83,7 +81,7 @@ $cq = "";
                     <li><a href="manage_contributions.php?view=pending">View Pending <span class="badge"><?php echo $cq;?></span></a></li>
                 </ul>
             </li>
-            <li role="presentation"><a href="dashboard.php">View Contributers</a></li>
+            <li role="presentation"><a href="add_gallery.php">Add Gallery</a></li>
         </ul>
     </section>
 
@@ -133,7 +131,7 @@ $cq = "";
                         <img src="../<?php echo $conrow['con_photo'];?>" class="thumbnail img-responsive" alt="">
                     </div>
                     <div class="col-md-10">
-                        <h4>Contribution by: <a class="special_link" href=""><?php echo $conrow['con_name']; ?></a></h4>
+                        <h4>Contribution by: <a class="special_link" target="_blank" href="../contributer.php?id=<?php echo $conrow['con_id'];?>"><?php echo $conrow['con_name']; ?></a></h4>
                         <h4>Contributed to: <a class="special_link" target="_blank" href="../view.php?id=<?php echo $orgrow['org_id'];?>"><?php echo $orgrow['org_name']; ?></a></h4>
                         Date: <?php echo $rows['con_date']; ?>
                     </div>

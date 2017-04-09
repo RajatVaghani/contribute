@@ -77,3 +77,6 @@
     cursor: pointer;
     color: #006064;
 }
+.content-line{
+  line-height: 2em;
+}

@@ -52,32 +52,124 @@
                     <li><a href="#organization" data-toggle="tab">Organization</a></li>
                     <li><a data-toggle="modal" data-target="#myModal" style="cursor:pointer">Submit Your Contributions</a></li>
                 </ul>
+                <?php
+                    if(isset($_GET['s'])){
+                    ?>
+                        <div class="alert alert-success" style="margin-top:15px;">
+                            <a href="#" data-dismiss="alert"class="close">&times;</a>
+                            <p>Thank you for contacting us, we will get back to you as soon as possible!</p>
+                        </div>
+                <?php
+            }else if(isset($_GET['e'])){
+            ?>
+            <div class="alert alert-danger" style="margin-top:15px;">
+                <a href="#" data-dismiss="alert"class="close">&times;</a>
+                <p>Error in sending form, please try again later!</p>
+            </div>
+            <?php
+            }
+                 ?>
                 <div id="my-tab-content" class="tab-content">
                     <div class="tab-pane active" id="individual">
-                        <form>
-                            <input name="first name" type="text" class="feedback-input" placeholder="First Name " required="required" />
-                            <input name="last name" type="text" class="feedback-input" placeholder="Last Name " />
-                            <input name="phone" type="text" class="feedback-input" placeholder="Phone" required="required"/>
-                            <input name="email" type="text" class="feedback-input" placeholder="Email" required="required" />
-                            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+                        <form class="form" id="contactForm" style="padding-top:20px;" action="action_contact_indi.php" method="POST">
+                          <div class="col-md-8">
+                          <table class="table table-hover stable table-responsive">
+                              <tr>
+                                  <td style="width:200px;">Name:</td>
+                                  <td style="vertical-align:middle;">
+                                      <div>
+                                          <input type="text" name="name" placeholder="Name"class="form-control"  required>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td >Email:</td>
+                                <td style="vertical-align:middle;">
+                                    <div>
+                                        <input type="text" name="email" placeholder="Email address" class="form-control" required>
+                                    </div>
+                                </td>
+                            </tr>
 
-                            <input type="file" id="exampleInputFile">
-                            <hr style="border-top: dotted 4px;" />
-                            <input type="submit" value="SUBMIT"/>
+                            <tr>
+                                <td>Your message:</td>
+                                <td style="vertical-align:top; ">
+                                    <div>
+                                        <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+                                    </div>
+                                </td>
+                            </tr>
+                          <tr>
+                              <td></td>
+                              <td style="vertical-align:middle;text-align: right;
+                              padding-right: 0px;">
+                              <div>
+                                  <button type="submit" id="button"class="btn fillbtn" style="
+                                  width: 130px;
+                                  height: auto;
+                                  padding: 5px;
+                                  ">Submit</button>
+
+                                </div>
+                              </table>
+                            </div>
                         </form>
                     </div>
                     <div class="tab-pane" id="organization">
-                        <form>
-                            <input name="name" type="text" class="feedback-input" placeholder="Name " required="required" />
-                            <input name="phone" type="text" class="feedback-input" placeholder="Phone" required="required"/>
-                            <input name="email" type="text" class="feedback-input" placeholder="Email" required="required" />
-                            <input name="Organization" type="text" class="feedback-input" placeholder="Organization Name" required="required" />
-                            <input name="Organization url" type="url" class="feedback-input" placeholder="Organization Url" required="required" />
-                            <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-                            <input type="file" id="exampleInputFile">
-                            <hr style="border-top: dotted 4px;" />
+                      <form class="form" id="contactForm" style="padding-top:20px;" action="action_contact_org.php" method="POST">
+                        <div class="col-md-8">
+                        <table class="table table-hover stable table-responsive">
+                            <tr>
+                                <td style="width:200px;">Name:</td>
+                                <td style="vertical-align:middle;">
+                                    <div>
+                                        <input type="text" name="name" placeholder="Name"class="form-control"  required>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <td style="vertical-align:middle;">
+                                    <div>
+                                        <input type="text" name="phone" placeholder="Phone"class="form-control"  required>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td style="vertical-align:middle;">
+                                    <div>
+                                        <input type="text" name="email" placeholder="Email Address"class="form-control"  required>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Organization:</td>
+                                <td style="vertical-align:middle;">
+                                    <div>
+                                        <input type="text" name="organization" placeholder="Organization Name"class="form-control"  required>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Your message:</td>
+                                <td style="vertical-align:top;">
+                                    <div>
+                                        <textarea name="message" class="form-control" placeholder="Your Message" rows="4" required></textarea>
+                                    </div>
+                                </td>
+                            </tr>
 
-                            <input type="submit" value="SUBMIT"/>
+                            <tr>
+                                <td style="vertical-align:middle;text-align:center;font-size:17px"></td>
+                                <td style="vertical-align:middle;text-align: right;
+                                padding-right: 0px;">
+                                <div>
+                                    <button type="submit" id="button" class="btn fillbtn" style="width: 130px;height: auto;padding: 5px;">Submit</button>
+
+                                  </div>
+                                </table>
+                              </div>
                         </form>
                     </div>
                     <div class="tab-pane" id="contributions">
@@ -86,9 +178,8 @@
                 </div>
             </div>
         </div>
-    </section>
+      </section>
 
-    
 
     <?php
 
@@ -105,7 +196,11 @@
     <script src="js/jquery.scrollTo.min.js"></script>
 
     <script>
-
+    $(document).ready(function(){
+        $(".btn fillbtn").click(function(){
+            $(".collapse").collapse('show');
+        });
+    });
     // get the value of the bottom of the #main element by adding the offset of that element plus its height, set it as a variable
     var mainbottom = $('#main').offset().top;
 

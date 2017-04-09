@@ -64,10 +64,8 @@ if($cq==0)
                     Manage Organizations <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">View</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Add</a></li>
-                    <li><a href="#">Edit</a></li>
+                    <li><a href="add_org.php">Add</a></li>
+                    <li><a href="edit_org.php">Edit</a></li>
                 </ul>
             </li>
             <li role="presentation" class="dropdown">
@@ -79,7 +77,7 @@ if($cq==0)
                     <li><a href="manage_contributions.php?view=pending">View Pending <span class="badge"><?php echo $cq;?></span></a></li>
                 </ul>
             </li>
-            <li role="presentation"><a href="dashboard.php">View Contributers</a></li>
+            <li role="presentation"><a href="add_gallery.php">Add Gallery</a></li>
         </ul>
     </section>
 

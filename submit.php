@@ -1,6 +1,10 @@
 <?php
 include "includes/db.php";
-$email = $_POST['email'];
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+}else{
+    $email = "";
+}
 $code = "na";
 $phone = "";
 $photo="";
@@ -73,6 +77,25 @@ if($code!="na"){
 
     <section class="sec container-fluid">
         <div class="container">
+            <?php
+        if(isset($_GET['e'])){
+        ?>
+        <div class="alert alert-danger" style="margin-top:15px;">
+            <a href="#" data-dismiss="alert"class="close">&times;</a>
+            <p>Error in sending form, please try again later!</p>
+        </div>
+        <?php
+    }else if(isset($_GET['s'])){
+
+        ?>
+        <div class="alert alert-danger" style="margin-top:15px;">
+            <a href="#" data-dismiss="alert"class="close">&times;</a>
+            <p>We have received your submission. Thank you for contributing.</p>
+        </div>
+        <?php
+    }
+             ?>
+
             <h3 class="page-header">
                 PLEASE FILL ALL DETAILS CAREFULLY
             </h3>
@@ -213,7 +236,7 @@ if($code!="na"){
                     <td style="vertical-align:middle;text-align: right;
                     padding-right: 0px;">
                     <div>
-                        <button type="button" class="btn fillbtn" onclick="submit()" style="
+                        <button type="submit" id="button"class="btn fillbtn" style="
                         width: 130px;
                         height: auto;
                         padding: 5px;
