@@ -22,18 +22,15 @@ $uploadOk = 1;
 
 
 if($code=="na"){
-    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-    // Check if image file is a actual image or fake image
-    $check = getimagesize($_FILES["image-upload"]["tmp_name"]);
-    if($check !== false) {
-        // echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        // echo "File is not an image.";
-        $uploadOk = 0;
+    if($_FILES['image-upload']['error'] == 4 ){
+        $target_file = "images/default_user.png";
+    }else{
+        if (move_uploaded_file($_FILES["image-upload"]["tmp_name"], $target_file)){
+
+        }
     }
+
     if($uploadOk ==1){
-        if (move_uploaded_file($_FILES["image-upload"]["tmp_name"], $target_file)) {
             if (move_uploaded_file($_FILES["proof"]["tmp_name"], $target_proof)) {
                 //echo $date;
                 $flag = 0;
@@ -60,11 +57,9 @@ if($code=="na"){
                 header('Location: submit.php?e=1');
 
             }
-        } else {
-             header('Location: submit.php?e=1');
-        }
     }
 }else{
+
     if (move_uploaded_file($_FILES["proof"]["tmp_name"], $target_proof)) {
         //echo $date;
 

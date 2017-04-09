@@ -146,7 +146,7 @@ $cq = "";
                             <div>
                                     <div id="image-preview" >
                                     <label for="image-upload" id="image-label">Choose File</label>
-                                    <input type="file" name="image-upload" id="image-upload" required/>
+                                    <input type="file" name="image-upload" id="image-upload"/>
                                 </div>
                             </div>
                         </td>

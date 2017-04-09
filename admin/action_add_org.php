@@ -22,9 +22,17 @@
         $target_dir = "../uploads/";
         $inputtarget = "uploads/";
         $target_file = $target_dir ."photo_". $name."_image.jpg";
-        $inputtarget.= $target_file;
+        $inputtarget.= "photo_". $name."_image.jpg";
+        // print_r($_FILES);
+        // echo $_FILES['image-upload']['error'];
+        if($_FILES['image-upload']['error'] == 4 ){
+            $inputtarget = "uploads/default.png";
+        }else{
+            if (move_uploaded_file($_FILES["image-upload"]["tmp_name"], $target_file)){
 
-        if (move_uploaded_file($_FILES["image-upload"]["tmp_name"], $target_file)) {
+            }
+        }
+
             $q1 = "INSERT INTO organization VALUES('', '$name', $category, '$timing', '$inputtarget', '$description', '$vision', $founded, $zip, '$city', '$street', '$url', '$email', $phone, '$rep')";
             $r1 = mysqli_query($con, $q1);
             $newid = mysqli_insert_id($con);
@@ -34,7 +42,6 @@
                 $r2 = mysqli_query($con, $q2);
             }
 
-        }
 
         header('Location: add_org.php?s=1');
 

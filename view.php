@@ -125,7 +125,7 @@ while($row=mysqli_fetch_assoc($result)){
                 <div class="col-sm-4 col-md-4">
                     <div class="thumbnail" style="padding:30px;margin-bottom:0px;min-height:230px" >
                         <div class="caption" style="text-align:center">
-                            <h3>Contribution</h3>
+                            <h3>Contributions</h3>
                             <?php
                             $q = "SELECT * FROM wall WHERE org_id = ".$org_id;
                             $re = mysqli_query($con, $q);
