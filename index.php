@@ -125,7 +125,7 @@ $cats = ["1"=>"Orphanage", "2"=>"Old Age Home", "3"=>"Blood Bank", "4"=>"Special
 					<?php
 						if($resq){
 					?>
-						<a href="view.php?id=<?php echo $detail['org_id'];?>"><img src="<?php echo $detail['org_logo'];?>" class="img-responsive" style="border-radius:5px;display:block;margin:0 auto;"/></a>
+						<a href="view.php?id=<?php echo $detail['org_id'];?>"><img src="<?php echo $detail['org_logo'];?>" class="img-responsive" style="border-radius:5px;display:block;margin:0 auto;height:175px"/></a>
                     <br/>
                     <h4 class="page-header" style="padding-top:0px;margin-top:3px;margin-bottom:10px;padding-bottom:3px"><?php echo $detail['org_name']; ?></h4>
                     <p style="font-size:16px"><?php echo $cats[$detail['org_category']]; ?></p>

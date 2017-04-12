@@ -2,7 +2,7 @@
 include '../includes/db.php';
 
 
-$q = "SELECT con_date AS dd FROM wall WHERE verified=1";
+$q = "SELECT con_date AS dd FROM wall WHERE verified=1 ORDER BY con_date";
 
 
 $res = mysqli_query($con, $q);

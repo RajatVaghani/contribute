@@ -17,6 +17,8 @@ if(mysqli_num_rows($res) > 0){
 
     header('Location: dashboard.php');
 
+}else{
+    header('Location: index.php?e=1');
 }
 
 

@@ -52,12 +52,23 @@ if(isset($_SESSION['loggedin'])){
             <div class="col-md-3"></div>
             <div class="col-md-6 col-xs-12">
                 <div class="box">
+                    <?php
+
+                        if(isset($_GET['e'])){
+                    ?>
+                        <div class="alert alert-danger">
+                            Please check username and password again.
+                        </div>
+                    <?php
+                        }
+
+                     ?>
                     <form class="form" action="action_login.php" method="post">
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Enter Email" class="form-control" style="height: 45px;font-size: 15px;">
+                            <input type="email" name="email" placeholder="Enter Email" class="form-control" style="height: 45px;font-size: 15px;" required>
                         </div>
                         <div class="form-group">
-                            <input type="password" name="password" placeholder="Enter Password" class="form-control" style="height: 45px;font-size: 15px;">
+                            <input type="password" name="password" placeholder="Enter Password" class="form-control" style="height: 45px;font-size: 15px;" required>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="strokebtn btn btn" style="padding: 9px;width: 100%;margin: 10px auto;">

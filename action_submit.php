@@ -63,20 +63,21 @@ if($code=="na"){
     if (move_uploaded_file($_FILES["proof"]["tmp_name"], $target_proof)) {
         //echo $date;
 
-        $result = mysqli_query($con,"UPDATE contributers SET `con_name`='$name', `con_phone`='$phone', `con_email`='$email', `con_photo`='$target_file'");
+                $smallq = "SELECT con_id FROM contributers WHERE `con_email`='$email' AND `code`='$code'";
+                $running = mysqli_query($con, $smallq);
+                $rows = mysqli_fetch_array($running);
 
-        $smallq = "SELECT con_id FROM contributers WHERE `con_email`='$email' AND `code`='$code'";
-        $running = mysqli_query($con, $smallq);
-        $rows = mysqli_fetch_array($running);
+                $conid = $rows['con_id'];
 
-        $conid = $rows['con_id'];
+        $result = mysqli_query($con,"UPDATE contributers SET `con_name`='$name', `con_phone`='$phone', `con_email`='$email', `con_photo`='$target_file' WHERE `con_id`=".$con_id);
+
         $wallquery = mysqli_query($con, "INSERT INTO wall VALUES('', $conid, '$target_proof', '$date', '$testimonial', $organization, 0)");
 
         $ratingquery = mysqli_query($con, "INSERT INTO ratings VALUES('', $organization, $exp)");
 
         //SENDMAIL
 
-        //header('Location: find.php?s=1');
+        header('Location: find.php?s=1');
     } else {
         header('Location: submit.php?e=1');
 
